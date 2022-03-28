@@ -50,6 +50,16 @@ easier to manage, more efficient to execute, easy to test, and better at handlin
 
 An effect is a plain JavaScript Object containing some instructions to be executed by the saga middleware.  
 
+**call**  
+return data from Promise  
+
+**all**  
+combine two or more watchers
+
+**take**  
+Creates an Effect description that instructs the middleware to wait for a specified action on the Store.  
+The result of yield take(pattern) is an action object being dispatched.
+
 ### Watcher/Worker
 
 **The watcher: will watch for dispatched actions and fork a worker on every action**  
