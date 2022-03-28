@@ -37,3 +37,33 @@ Redux-thunk vs Redux-saga
 https://medium.com/@shoshanarosenfield/redux-thunk-vs-redux-saga-93fe82878b2d
 
 https://russianblogs.com/article/7913978121/
+
+##  Redux-Saga  
+
+**Redux-saga** is a library that aims to make application side effects  
+(i.e. asynchronous things like data fetching and impure things like accessing the browser cache)  
+easier to manage, more efficient to execute, easy to test, and better at handling failures.  
+
+**Redux-saga** is a redux middleware.  
+
+### Effect  
+
+An effect is a plain JavaScript Object containing some instructions to be executed by the saga middleware.  
+
+### Watcher/Worker
+
+**The watcher: will watch for dispatched actions and fork a worker on every action**  
+**The worker: will handle the action and terminate**
+
+![Screenshot_19](https://user-images.githubusercontent.com/66359081/160393458-0af361ac-bf0c-42a0-b9ac-cff502f04c3e.png)
+
+### Blocking/Non-blocking call  
+
+**A Blocking call** means that the Saga yielded an Effect and will wait for the outcome of  
+its execution before resuming to the next instruction inside the yielding Generator.
+
+**A Non-blocking** call means that the Saga will resume immediately after yielding the Effect.
+
+
+
+
