@@ -63,7 +63,17 @@ The result of yield take(pattern) is an action object being dispatched.
 ### Watcher/Worker
 
 **The watcher: will watch for dispatched actions and fork a worker on every action**  
-**The worker: will handle the action and terminate**
+**The worker: will handle the action and terminate**  
+
+В этой библиотеке есть  **workers watchers effects**
+
+**worker** - это функция внутри которой выполняется какае-то асинхронная лога (timeout, запросы на сервер...)  
+**watcher** - это функция генератор в которой мы с помощью специальных функций указываем тип action и worker, которые будет отрабатывать, когда action  с таким  
+типом, который мы указали будет отрабатывать  
+**watcher** это функция наблюдатель, которая ждёт пока отработает тот или иной action, если к этому action  привязан какой-то **worker**(простая асинхронная  
+функция, то **watcher** эту функцию вызывает.  
+**effects** -  набор встроенных в redux saga  функций, которые помогают делать запросы, делать  dispatch, следить за **workers** и т д 
+
 
 ![Screenshot_19](https://user-images.githubusercontent.com/66359081/160393458-0af361ac-bf0c-42a0-b9ac-cff502f04c3e.png)
 
