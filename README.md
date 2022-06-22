@@ -3,7 +3,7 @@
 ## что такое midlleware  какие бывают    
 
 
-**midlleware   - промежуточное програмное обеспечение которое срабатывает после диспатча и перед редьюсером. midlleware    обрабатывает асинхронную логику
+**midlleware - промежуточное програмное обеспечение которое срабатывает после диспатча и перед редьюсером. midlleware    обрабатывает асинхронную логику
 и возвращает результат в редьюсер.**
 
 
@@ -21,7 +21,21 @@ https://medium.com/@shoshanarosenfield/redux-thunk-vs-redux-saga-93fe82878b2d
 
 https://qna.habr.com/q/407081  
 
+
+**thunks** - это шаблон написания функций с логикой внутри, которые могут взаимодействовать с методами **dispatch** и **getState** хранилища Redux.  
+https://www.youtube.com/watch?v=CtrWoX_KDjE
+
+**Middleware** - https://www.youtube.com/watch?v=ax1verdkVPo
+
 Redux-Thunk, который использует функции обратного вызова, поток Redux-Saga можно запускать, приостанавливать и отменять из основного приложения с помощью обычных действий Redux. 
+
+**Redux-thunk** -  это  middleware for Redux.  
+Redux Thunk используется для асинхронного взаимодействия с внешним API с целью получения или сохранения данных.  
+Redux Thunk - это Middleware который позволяет внутри сторонних функций исп dispatch
+
+ https://github.com/reduxjs/redux-thunk    
+ https://redux.js.org/usage/writing-logic-thunks
+ https://www.digitalocean.com/community/tutorials/redux-redux-thunk-ru
 
 Преимущество Redux-Saga по сравнению с Redux-Thunk заключается в том, что вы можете избежать ада обратного вызова  
 Кроме того, вы можете более легко протестировать свой асинхронный поток данных.  
